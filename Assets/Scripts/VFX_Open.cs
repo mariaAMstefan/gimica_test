@@ -6,6 +6,13 @@ public class VFX_Open : MonoBehaviour
 {
     public ParticleSystem VFX_open;
     public ParticleSystem VFX_glow;
+    public ParticleSystem VFX_Anticipation;
+
+    void VFX_PreOpen()
+    {
+        VFX_Anticipation.Play();
+    }
+
     void VFX_Trigger()
     {
         VFX_open.Play();
@@ -16,6 +23,7 @@ public class VFX_Open : MonoBehaviour
         VFX_glow.Play();
     }
 
+    
     // Start is called before the first frame update
     void Start()
     {

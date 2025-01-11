@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Interact : MonoBehaviour
 {
-    public Animator myAnimator;
+    public Animator PresentAnimator;
+    public Animator FlashAnimator;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +17,12 @@ public class Interact : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            myAnimator.SetTrigger("Interact");
+            PresentAnimator.SetTrigger("Interact");
+            FlashAnimator.SetTrigger("Interact");
         }
         if (Input.GetMouseButtonDown(1))
         {
-            myAnimator.SetTrigger("Close");
+            PresentAnimator.SetTrigger("Close");
         }
     }
 }
